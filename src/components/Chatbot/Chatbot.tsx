@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './chatbot.module.css';
 import { Button, Form, Nav, Tab } from 'react-bootstrap';
+import MockChatComponent from './mock-chat';
 
 interface ChatBotProps {
   closeChatBot: () => void;
@@ -74,7 +75,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ closeChatBot }) => {
           <Tab.Content className="flex-grow-1">
             <Tab.Pane eventKey="tabScript" className="h-100">
               {/* chat panel */}
-              <div className="position-relative h-100">
+              <div className="position-relative h-100 d-none">
                 <div className={`${styles.chatPanelWrap} h-100 px-3`} ref={messagesContainerRef}>
                   <div className={`${styles.stepContent} mb-3`}>
                     <h4 className="fs-6 fw-bold">Step 3: Phone Configuration</h4>
@@ -111,6 +112,9 @@ const ChatBot: React.FC<ChatBotProps> = ({ closeChatBot }) => {
                     <span className="material-icons text-dark fs-5">send</span>
                   </Button>
                 </div>
+              </div>
+              <div className={`${styles.chatPanelWrap} h-100 px-3`} ref={messagesContainerRef}>
+                <MockChatComponent />
               </div>
             </Tab.Pane>
             <Tab.Pane eventKey="tabHelp">...</Tab.Pane>
