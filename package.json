@@ -1,12 +1,11 @@
 {
   "name": "chat-script-brsp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "brsp",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "start": "react-scripts start",
     "build": "rollup -c",
     "lint": "eslint './{src,app}/**/*.{ts,tsx}'",
     "size": "size-limit",
@@ -43,6 +42,8 @@
     "@types/react-router": "^5.1.20",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
@@ -63,12 +64,11 @@
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^9.0.0",
     "tailwindcss": "^3.3.5",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "typed.js": "^2.1.0"
   },
   "dependencies": {
     "@rollup/plugin-terser": "^0.4.3",
-    "bootstrap": "^5.3.2",
-    "react-bootstrap": "^2.9.1",
     "tslib": "^2.6.2"
   }
 }

@@ -4,8 +4,9 @@ import { ChatBot } from './components/Chatbot';
 
 export const ChatComponent: React.FC = () => {
   const [showChat, setShowChat] = useState(true);
+  const [stepTwo, setStepTwo] = useState(false);
   const closeChatBot = () => {
     setShowChat(false);
   };
-  return <div className={styles.root}>{showChat && <ChatBot closeChatBot={closeChatBot} />}</div>;
+  return <div className={styles.root}>{showChat && <ChatBot closeChatBot={closeChatBot} step={stepTwo} />}</div>;
 };
