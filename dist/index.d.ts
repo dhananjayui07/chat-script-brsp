@@ -1,2 +1,3 @@
 import React from 'react';
-export declare const ChatComponent: React.FC;
+import './styles.css';
+export declare const ChatComponent: () => React.JSX.Element;
